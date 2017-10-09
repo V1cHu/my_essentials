@@ -1,0 +1,24 @@
+NPM:::
+npm config set proxy http://<username>:<password>@<hostname>:<port>
+npm config set https-proxy http://<username>:<password>@<hostname>:<port>
+
+
+UNIX::
+http_proxy=http://<username>:<password>@<hostname>:<port>/
+https_proxy=http://<username>:<password>@<hostname>:<port>/
+no_proxy="localhost,127.0.0.1"
+HTTP_PROXY=http://<username>:<password>@<hostname>:<port>/
+HTTPS_PROXY=http://<username>:<password>@<hostname>:<port>/
+NO_PROXY="localhost,127.0.0.1,localaddress,.localdomain.com"
+
+
+Acquire::http::proxy "http://<username>:<password>@<hostname>:<port>";
+Acquire::https::proxy "https://<username>:<password>@<hostname>:<port>";
+
+Python-PIP::
+pip3 install --proxy <username>:<password>@http://<hostname>:<port> beautifulsoup4
+
+
+GIT PROXY
+git config --global http.proxy http://<username>:<password>@<hostname>:<port>
+git config --global https.proxy http://<username>:<password>@<hostname>:<port>
